@@ -1,31 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>jQuery LinkQTip example page</title>
-	<style type="text/css">@import url("jquery.linkqtip-styles.css");</style>
-	<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
-	<script type="text/javascript" src="jquery.linkqtip.js"></script>
-	<script type="text/javascript">
-	   $(document).ready(function() {
-		   $('a').linkQTip();
-		   
-		   $('#toggle').click(function() {
-			   $('#a1').data('LinkQTip').toggle();			    			   
-		   });
-	   });
-	</script>
-</head>
-<body>
-<h2>Hover a link to preview it</h2>
-<ul>
-    <li><a href="http://en.wikipedia.org/wiki/Larch" id="a1">http://en.wikipedia.org/wiki/Larch</a></li>
-    <li><a href="http://bash.org/">http://bash.org/</a></li>
-    <li><a href="http://jquery.com/">http://jquery.com/</a></li>
-    <li><a href="http://www.xkcd.com/">http://www.xkcd.com/</a></li>
-    <li><a href="https://www.vaadin.com/">https://www.vaadin.com/</a></li>
-    
-    <div id="toggle">Toggle first qtip by clicking me!</div>
-</ul>    
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>jQuery LinkQTip example page</title>
+            <style type="text/css">@import url("jquery.linkqtip-styles.css");</style>
+            <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+            <script type="text/javascript" src="jquery.linkqtip.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function() {
+                   $('a').linkQTip();
+                   
+                   $('#toggle').click(function() {
+                       $('#a1').data('LinkQTip').toggle();                               
+                   });
+               });
+            </script>
+        </head>
+    <body>
+        <h2>Hover a link to preview it</h2>
+        <ul>
+            <li><a href="http://en.wikipedia.org/wiki/Larch" id="a1">http://en.wikipedia.org/wiki/Larch</a></li>
+            <li><a href="http://bash.org/">http://bash.org/</a></li>
+            <li><a href="http://jquery.com/">http://jquery.com/</a></li>
+            <li><a href="http://www.xkcd.com/">http://www.xkcd.com/</a></li>
+            <li><a href="https://www.vaadin.com/">https://www.vaadin.com/</a></li>
+        </ul>
+        <div id="toggle">Toggle first qtip by clicking me!</div>    
+    </body>
 </html>
