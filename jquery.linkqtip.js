@@ -15,7 +15,6 @@
         qtip.settings = {};
 
         qtip.init = function() {
-            console.log(qtip);
             qtip.settings = $.extend({}, defaults, options);
             $(element).hover(showQTip, hideQTip);        
         }
