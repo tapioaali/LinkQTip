@@ -21,7 +21,6 @@
 
         // public function
         qtip.toggle = function() {
-            console.log(div);
             if(div != null) {
                 hideQTip();
             } else {
