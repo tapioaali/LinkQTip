@@ -11,25 +11,31 @@
 
         var qtip = this;
         var div = null;
+    	var toggled = false;
         var $element = $(element)        
         qtip.settings = {};
 
         qtip.init = function() {
             qtip.settings = $.extend({}, defaults, options);
             $(element).hover(showQTip, hideQTip);        
-        }
+        };
 
         // public function
         qtip.toggle = function() {
-            if(div != null) {
+            if(toggled) {
+				toggled = false;
                 hideQTip();
             } else {
                 showQTip();
+				toggled = true;
             }
-        }
+        };
         
         // private functions
         var showQTip = function() {
+			if(toggled) {
+				return;
+			}
             var o = qtip.settings;
             var topPosition = $(element).offset().top + o.offsetTop;
             var leftPosition = $(element).offset().left + $(element).width() + o.offsetLeft;
@@ -47,15 +53,17 @@
             
             $(div).append(img);
             $('body').append(div);        
-        }
+        };
         
         var hideQTip = function() {
-            $(div).remove();
-            div = null;
-        }
+			if(!toggled) {
+				$(div).remove();
+				div = null;
+			}
+        };
         
         qtip.init();
-    }
+    };
     $.fn.linkQTip = function (options) {
         return this.each(function () {
             if (undefined == $(this).data('LinkQTip')) {
