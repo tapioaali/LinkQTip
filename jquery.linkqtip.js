@@ -11,7 +11,7 @@
 
         var qtip = this;
         var div = null;
-		var toggled = false;       
+	    var toggled = false;       
         qtip.settings = {};
 
         qtip.init = function() {
@@ -19,7 +19,6 @@
             $(element).hover(showQTip, hideQTip);        
         };
 
-        // public function
         qtip.toggle = function() {
             if(toggled) {
 				toggled = false;
@@ -30,7 +29,6 @@
             }
         };
         
-        // private functions
         var showQTip = function() {
 			if(toggled) {
 				return;
