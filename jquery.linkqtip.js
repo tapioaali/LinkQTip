@@ -6,13 +6,12 @@
             viewPortWidth: 1024,
             offsetTop: 0,
             offsetLeft: 20,
-            onLinkQtipShow: function() {}
+            onLinkQTipShow: function() {}
         };
 
         var qtip = this;
         var div = null;
-    	var toggled = false;
-        var $element = $(element)        
+		var toggled = false;       
         qtip.settings = {};
 
         qtip.init = function() {
@@ -52,16 +51,17 @@
             img.attr('src', imgUrl);
             
             $(div).append(img);
-            $('body').append(div);        
+            $('body').append(div);    
+            o.onLinkQTipShow();    
         };
         
         var hideQTip = function() {
-			if(!toggled) {
-				$(div).remove();
+	    if(!toggled) {
+	        $(div).remove();
 				div = null;
 			}
         };
-        
+       
         qtip.init();
     };
     $.fn.linkQTip = function (options) {
